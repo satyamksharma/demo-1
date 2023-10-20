@@ -38,12 +38,12 @@ export default function Home() {
                             alt='info'
                         />
                     </button>
-                    <button
+                    <div
                         className=' rounded-full w-10 h-10 bg-gray-300 p-1 mx-2'
                         onClick={toggleDropdown}
                     >
                         <User isDropdownOpen={isDropdownOpen} />
-                    </button>
+                    </div>
                 </div>
             </nav>
 
