@@ -20,12 +20,32 @@ export default function Home() {
                     />
                 </div>
                 <div className=' flex gap-x-4'>
-                    <button className=' rounded-full w-fit bg-gray-700 p-2'>
-                        <img
-                            src='./search.svg'
-                            alt='search'
-                        />
-                    </button>
+                    <div className='mx-auto max-w-md bg-gray-700 rounded-full'>
+                        <form
+                            action=''
+                            className='relative mx-auto w-max'
+                        >
+                            <input
+                                type='search'
+                                className='cursor-pointer relative z-10 h-10 w-10 rounded-full bg-transparent focus:bg-gray-50  focus:w-full focus:cursor-text  focus:pr-4'
+                            />
+                            <svg
+                                width='24'
+                                height='24'
+                                viewBox='0 0 24 24'
+                                fill='none'
+                                xmlns='http://www.w3.org/2000/svg'
+                                className='absolute inset-y-0 m-auto h-10 w-10 border-r border-transparent p-2 mx-auto focus:text-gray-50'
+                            >
+                                <path
+                                    d='M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z'
+                                    stroke='white'
+                                    stroke-linecap='round'
+                                    stroke-linejoin='round'
+                                />
+                            </svg>
+                        </form>
+                    </div>
                     <button className=' rounded-full w-fit bg-gray-700 p-2'>
                         <img
                             src='./bell.svg'
