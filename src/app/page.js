@@ -1,6 +1,14 @@
+'use client';
 import Image from 'next/image';
+import User from '@/components/User';
+import { useState } from 'react';
 
 export default function Home() {
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!isDropdownOpen);
+    };
     return (
         <main className=''>
             {/* Main Nav */}
@@ -30,10 +38,11 @@ export default function Home() {
                             alt='info'
                         />
                     </button>
-                    <button className=' rounded-full w-10 h-10 bg-gray-300 p-1 mx-2'>
-                        <span className=' text-iris-100 w-full h-full text-lg font-semibold'>
-                            A
-                        </span>
+                    <button
+                        className=' rounded-full w-10 h-10 bg-gray-300 p-1 mx-2'
+                        onClick={toggleDropdown}
+                    >
+                        <User isDropdownOpen={isDropdownOpen} />
                     </button>
                 </div>
             </nav>
@@ -57,7 +66,7 @@ export default function Home() {
                             <li className='active:font-semibold cursor-pointer'>Career Page</li>
                         </ul>
                     </div>
-                    <ul className=' mx-2 text-sm flex flex-col gap-y-8'>
+                    <ul className=' mx-2 text-sm flex flex-col gap-y-6'>
                         <li className='flex px-2'>
                             <img
                                 src='./mail.svg'
