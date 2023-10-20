@@ -9,10 +9,10 @@ const User = ({ isDropdownOpen }) => {
             </button>
 
             {isDropdownOpen && (
-                <div className=' absolute right-0 top-14 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600'>
+                <div className=' absolute right-0 top-14 text-base list-none bg-gray-900 divide-y divide-gray-700 rounded-s-lg shadow '>
                     <div className='px-4 py-3'>
-                        <span className='block text-sm text-gray-900 dark:text-white'>User</span>
-                        <span className='block text-sm  text-gray-500 truncate dark:text-gray-400'>
+                        <span className='block text-sm text-gray-50 dark:text-white'>User</span>
+                        <span className='block text-sm  text-gray-50 truncate '>
                             name@email.com
                         </span>
                     </div>
@@ -20,7 +20,7 @@ const User = ({ isDropdownOpen }) => {
                         <li>
                             <a
                                 href='#'
-                                className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
+                                className='block px-4 py-2 text-sm text-gray-50 hover:bg-gray-500 '
                             >
                                 Dashboard
                             </a>
@@ -28,7 +28,7 @@ const User = ({ isDropdownOpen }) => {
                         <li>
                             <a
                                 href='#'
-                                className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
+                                className='block px-4 py-2 text-sm text-gray-50 hover:bg-gray-500 '
                             >
                                 Settings
                             </a>
@@ -36,7 +36,7 @@ const User = ({ isDropdownOpen }) => {
                         <li>
                             <a
                                 href='#'
-                                className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
+                                className='block px-4 py-2 text-sm text-gray-50 hover:bg-gray-500 '
                             >
                                 Sign out
                             </a>
