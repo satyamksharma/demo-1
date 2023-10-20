@@ -1,0 +1,68 @@
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+
+:root {
+    --body-font-family: 'WorkSans-Regular', Helvetica;
+    --body-font-size: 13px;
+    --body-font-style: normal;
+    --body-font-weight: 400;
+    --body-letter-spacing: -0.26px;
+    --body-line-height: normal;
+    --fuschia-100: #ef5da8;
+    --fuschia-60: #fcddec;
+    --fuschia-80: #f178b6;
+    --gray-300: #d0d5dd;
+    --gray-500: #667085;
+    --gray-700: #2f2f30;
+    --gray-900: #101828;
+    --header-1-font-family: 'WorkSans-Bold', Helvetica;
+    --header-1-font-size: 34px;
+    --header-1-font-style: normal;
+    --header-1-font-weight: 700;
+    --header-1-letter-spacing: -0.68px;
+    --header-1-line-height: normal;
+    --header-2-font-family: 'WorkSans-Bold', Helvetica;
+    --header-2-font-size: 20px;
+    --header-2-font-style: normal;
+    --header-2-font-weight: 700;
+    --header-2-letter-spacing: -0.4px;
+    --header-2-line-height: normal;
+    --iris-100: #1d4ede;
+    --iris-60: #a5a6f6;
+    --iris-80: #7879f1;
+    --primary-50: #f9fafc;
+    --primary-600: #7f56d9;
+    --shadow-xs: 0px 1px 2px 0px #1018280d;
+    --text-md-medium-font-family: 'Inter-Medium', Helvetica;
+    --text-md-medium-font-size: 16px;
+    --text-md-medium-font-style: normal;
+    --text-md-medium-font-weight: 500;
+    --text-md-medium-letter-spacing: 0px;
+    --text-md-medium-line-height: 24px;
+    --text-md-regular-font-family: 'Inter-Regular', Helvetica;
+    --text-md-regular-font-size: 16px;
+    --text-md-regular-font-style: normal;
+    --text-md-regular-font-weight: 400;
+    --text-md-regular-letter-spacing: 0px;
+    --text-md-regular-line-height: 24px;
+    --text-sm-medium-font-family: 'Inter-Medium', Helvetica;
+    --text-sm-medium-font-size: 14px;
+    --text-sm-medium-font-style: normal;
+    --text-sm-medium-font-weight: 500;
+    --text-sm-medium-letter-spacing: 0px;
+    --text-sm-medium-line-height: 20px;
+    --text-sm-regular-font-family: 'Inter-Regular', Helvetica;
+    --text-sm-regular-font-size: 14px;
+    --text-sm-regular-font-style: normal;
+    --text-sm-regular-font-weight: 400;
+    --text-sm-regular-letter-spacing: 0px;
+    --text-sm-regular-line-height: 20px;
+    --white: #ffffff;
+}
+
+@layer base {
+    body {
+        @apply p-0 m-0;
+    }
+}
