@@ -5,9 +5,13 @@ import { useState } from 'react';
 
 export default function Home() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const [isSidebarOpen, setSidebarOpen] = useState(true);
 
     const toggleDropdown = () => {
         setDropdownOpen(!isDropdownOpen);
+    };
+    const toggleSidebar = () => {
+        setSidebarOpen(!isSidebarOpen);
     };
     return (
         <main className=''>
@@ -90,16 +94,19 @@ export default function Home() {
 
             <section className=''>
                 {/* sidebar */}
-                <aside className=' fixed flex flex-col justify-between bg-primary-50 h-full w-48 my-16 py-6 px-2 z-20'>
-                    <div className=' text-sm'>
-                        <button className='flex'>
+                <aside className=' fixed flex flex-col bg-primary-50 h-full w-48 my-16 py-6 px-2 z-20'>
+                    <div className=' text-sm absolute'>
+                        <button
+                            className='flex'
+                            onClick={toggleSidebar}
+                        >
                             <img
                                 src='./down.svg'
                                 alt='down'
                             />
                             <span className='active:font-semibold font-semibold'>Settings</span>
                         </button>
-                        <ul className=' ml-5 '>
+                        <ul className={` ml-5 ${isSidebarOpen ? '' : 'hidden'}`}>
                             <li className='active:font-semibold font-semibold cursor-pointer'>
                                 Members
                             </li>
@@ -107,7 +114,7 @@ export default function Home() {
                             <li className='active:font-semibold cursor-pointer'>Career Page</li>
                         </ul>
                     </div>
-                    <ul className=' mx-2 text-sm flex flex-col gap-y-6'>
+                    <ul className=' relative my-auto mx-2 text-sm flex flex-col gap-y-6'>
                         <li className='flex px-2'>
                             <img
                                 src='./mail.svg'
@@ -118,7 +125,6 @@ export default function Home() {
                         </li>
                         <li className=' text-gray-400 font-semibold'> &copy; Plumes Copyright</li>
                     </ul>
-                    <div className=''></div>
                 </aside>
                 {/* main content */}
                 <div className=' ml-56 pt-20'>
