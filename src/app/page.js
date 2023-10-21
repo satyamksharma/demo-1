@@ -6,6 +6,7 @@ import { useState } from 'react';
 export default function Home() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const [isSidebarOpen, setSidebarOpen] = useState(true);
+    const [isSubMenuActive, setSubMenuActive] = useState(1);
 
     const toggleDropdown = () => {
         setDropdownOpen(!isDropdownOpen);
@@ -190,8 +191,29 @@ export default function Home() {
                             </svg>
                         </form>
                     </div>
-                    <div className=''>
-                        <ul className=''></ul>
+                    <div className='m-4'>
+                        <ul className='flex gap-x-6 border-b p-2 pb-0 text-lg font-text-md-regular font-medium cursor-pointer'>
+                            <li
+                                className={`hover:text-iris-100 ${
+                                    isSubMenuActive === 0
+                                        ? 'text-iris-100 border-iris-100 border-b'
+                                        : ''
+                                }`}
+                                onClick={() => setSubMenuActive(0)}
+                            >
+                                Sub menu 1
+                            </li>
+                            <li
+                                className={`hover:text-iris-100 ${
+                                    isSubMenuActive === 1
+                                        ? 'text-iris-100 border-iris-100 border-b'
+                                        : ''
+                                }`}
+                                onClick={() => setSubMenuActive(1)}
+                            >
+                                Sub menu 2
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
