@@ -192,11 +192,7 @@ const Form = ({ isSubMenuActive }) => {
                     name='Recruiter'
                     id='Recruiter'
                     className=' peer relative rounded-lg bg-transparent border border-gray-300 px-6 py-3 w-5/12 text-xl  '
-                >
-                    <option value='1'>Girish Prabhu</option>
-                    <option value='2'>Anand Achutan</option>
-                    <option value='3'>Harsha BN</option>
-                </select>
+                ></select>
             </div>
             <div className='py-12 border-b flex justify-between px-4 '>
                 <div className='flex gap-x-4 items-center'>

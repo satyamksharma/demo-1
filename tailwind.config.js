@@ -4,9 +4,6 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'fuschia-100': 'var(--fuschia-100)',
-                'fuschia-60': 'var(--fuschia-60)',
-                'fuschia-80': 'var(--fuschia-80)',
                 'gray-300': 'var(--gray-300)',
                 'gray-500': 'var(--gray-500)',
                 'gray-700': 'var(--gray-700)',
