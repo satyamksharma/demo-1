@@ -1,7 +1,13 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Info from './info';
 
 const Form = ({ isSubMenuActive }) => {
+    const [value, setValue] = useState('1');
+
+    const handleSelectChange = (e) => {
+        setValue(e.target.value);
+    };
     return (
         <form className={`${isSubMenuActive === 1 ? '' : 'hidden'} mr-4`}>
             <div className='py-12 border-b flex justify-between px-4 '>
@@ -187,12 +193,36 @@ const Form = ({ isSubMenuActive }) => {
                     <p>Salary Range</p>
                     <Info content={' Lorem ipsum dolor sit. '} />
                 </div>
-                <select
-                    type='text'
-                    name='Recruiter'
-                    id='Recruiter'
-                    className=' peer relative rounded-lg bg-transparent border border-gray-300 px-6 py-3 w-5/12 text-xl  '
-                ></select>
+                <div className=' flex w-5/12 border border-gray-300 rounded-lg justify-between '>
+                    <select
+                        name='Recruiter'
+                        id='Recruiter'
+                        className=' relative  bg-transparent px-6 py-3 w-2/12 text-xl  '
+                        value={value}
+                        onChange={handleSelectChange}
+                    >
+                        <option value='1'>USD</option>
+                        <option value='2'>INR</option>
+                        <option value='3'>EUR</option>
+                    </select>
+                    <p className=' my-auto text-xl'>
+                        {value === '1' ? '$' : value === '2' ? '₹' : '€'}
+                    </p>
+                    <input
+                        type='number'
+                        name=''
+                        id=''
+                        className=' relative  bg-transparent  px-6 py-3 w-6/12 text-xl  '
+                    />
+                    <select
+                        name=''
+                        id=''
+                        className=' relative  bg-transparent  px-6 py-3 w-fit text-xl text-end  '
+                    >
+                        <option value='1'>Per Annum</option>
+                        <option value='2'>Per Month</option>
+                    </select>
+                </div>
             </div>
             <div className='py-12 border-b flex justify-between px-4 '>
                 <div className='flex gap-x-4 items-center'>
